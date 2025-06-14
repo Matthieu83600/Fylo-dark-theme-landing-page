@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Raleway, Open_Sans } from "next/font/google";
 import "@/sass/global.scss";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={`${raleway.variable}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
