@@ -1,0 +1,64 @@
+@use "./base";
+
+// Desktop styles
+body {
+  background-color: base.$navy-850;
+  margin-block-start: 80.72px;
+  margin-inline-start: 79px;
+  margin-inline-end: 80px;
+  color: base.$white;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    width: 176px;
+    height: 51.05px;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 56px;
+    li {
+      font-size: base.$f-16;
+      line-height: base.$lh-120;
+      cursor: pointer;
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// Tablet styles
+@media (max-width: 1024px) {
+  body {
+    margin-block-start: 80px;
+    margin-inline-start: 54px;
+    margin-inline-end: 54px;
+  }
+  header {
+    .logo {
+      width: 137.89px;
+      height: 40px;
+    }
+  }
+}
+
+// Mobile styles
+@media (max-width: 768px) {
+  body {
+    margin-block-start: 24px;
+    margin-inline-start: 20px;
+    margin-inline-end: 36px;
+  }
+  header {
+    .logo {
+      width: 80px;
+      height: 24px;
+    }
+  }
+}
